@@ -25,4 +25,13 @@ INNER JOIN juego j ON p.ID_producto = j.ID_producto
 INNER JOIN juego_conexion jc ON j.ID_juego = jc.ID_juego
 INNER JOIN conexion c ON jc.ID_conexion = c.ID_conexion
 WHERE c.Tipo_conexion = 'Online';
+
+- consulta 4: listar los pedidos del desarrollador John loke
+
+SELECT p.ID_producto, p.Nom_pedido AS Juego, d.Nom_desarrollador, d.Apelli_desarrollador
+FROM Producto p
+INNER JOIN juego j ON p.ID_producto = j.ID_producto
+INNER JOIN juego_desarrollador jd ON j.ID_juego = jd.ID_juego
+INNER JOIN desarrollador d ON jd.ID_desarrollador = d.ID_desarrollador
+WHERE d.Nom_desarrollador = 'John' AND d.Apelli_desarrollador = 'Locke';
  
