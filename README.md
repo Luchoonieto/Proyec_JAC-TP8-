@@ -86,3 +86,17 @@ SELECT p.ID_producto,
 FROM Producto p
 INNER JOIN cancion c ON p.ID_producto = c.ID_producto;
 
+- consulta 9: Listar todos los pedidos pagados en efectivo
+
+SELECT pe.ID_pedido, 
+       pe.Fecha_pedido, 
+       pe.PrecioT_pedido, 
+       pa.Tipo_pago, 
+       c.Nom_cliente, 
+       c.Apelli_cliente
+FROM pedido pe
+INNER JOIN pago pa ON pe.ID_pago = pa.ID_pago
+INNER JOIN cliente c ON pe.ID_cliente = c.ID_cliente
+WHERE pa.Tipo_pago = 'Efectivo';
+
+
