@@ -1,6 +1,34 @@
 # Proyec_JAC-TP8-
 
 
+Descripcion del documento
+
+1 - Introduccion:
+
+-proposito: Este documento especifica los requisitos que seran necesarios del sistema "Gestor de Pedidos", una aplicacion diseñada y pensada para la gestion de pedidos de una tienda. El documento esta dirigido para al equipo que controla los resgistros del pedido.
+
+-alcance: El sistema permite registrar, eliminar y editar los registros confirmados, incluyendo
+
+-valor: El beneficio de este sistema para el negocio, es poder registrar los pedidos ya confirmados de una forma mas ordenada y rapida
+
+2 - Descripcion General:
+-persperctiva: Es un sistema nuevo y no se integraria con otros sistemas, es decir, es independiente, 
+
+-usuario: El rol que cumpliria el usuario para este "Gestor de Pedidos" es la administrasion de pedidos
+
+-funciones principales: Las funciones principales de este sistema de gestor de pedidos, ademas de registrar los pedidos, se puede editar y eliminar pedidos en caso de que sean necesarios
+
+-restrincciones: para este sistema hay un plazo de 4 meses para desarrollarlo y el presupuesto es de 200USD, si hay normativa de seguridad para proteger los datos de este sistema
+
+3 - requisitos especificos
+
+• -requisitos de interfaces externas: ​​El sistema dispondrá de una interfaz gráfica (web o de escritorio) clara para que el personal autorizado pueda registrar, consultar y administrar las compras de productos. Tambien, ​La base de datos estará alojada en un Sistema Gestor de Bases de Datos Relacional, el sistema operará en equipos de escritorio o servidores estándar, compatibles con dispositivos de entrada convencionales
+
+• Requisitos funcionales: las funciones que tendrian serian las siguientes: Registro de Compras de Productos: El sistema debe permitir registrar una nueva compra de productos (pudiendo asociar juegos, canciones o álbumes), especificando la fecha, las cantidades adquiridas y el costo unitario/total. debera permitir buscar y filtrar el historial de compras por fecha, tipo de producto, mostrando el detalle completo de cada transacción registrada.
+
+• Requisitos no funcionales: Rendimiento y Tiempos de Respuesta: Las consultas sobre el historial de compras y los reportes de productos adquiridos deben completarse en un tiempo menor a 2 segundos bajo condiciones normales. Tambien, al registro y modificación de las compras estará restringido mediante autenticación de usuarios, permitiendo modificar registros únicamente a roles con permisos autorizados.
+
+
 -consultas:
 
 
