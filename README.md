@@ -56,3 +56,21 @@ WHERE a.Nom_artista = 'Billie' AND a.Apelli_artista = 'Eilish';
 SELECT ID_producto, Tipo_producto, Nom_pedido, Precio_producto, Lanza_producto
 FROM Producto
 WHERE Precio_producto < 35000.00;
+
+
+- consulta 7: Listar todas las canciones de artistas asociados al género 'Pop'
+
+SELECT DISTINCT p.ID_producto, 
+                p.Nom_pedido AS Nombre_Cancion, 
+                c.Duracion_cancion, 
+                p.Precio_producto, 
+                a.Nom_artista, 
+                a.Apelli_artista, 
+                g.Nom_generoA AS Genero
+FROM Producto p
+INNER JOIN cancion c ON p.ID_producto = c.ID_producto
+INNER JOIN artista_cancion ac ON c.ID_cancion = ac.ID_cancion
+INNER JOIN artista a ON ac.ID_artista = a.ID_artista
+INNER JOIN artista_generoA ag ON a.ID_artista = ag.ID_artista
+INNER JOIN generoA g ON ag.ID_generoA = g.ID_generoA
+WHERE g.Nom_generoA = 'Pop';
