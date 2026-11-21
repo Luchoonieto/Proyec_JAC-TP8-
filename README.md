@@ -74,3 +74,15 @@ INNER JOIN artista a ON ac.ID_artista = a.ID_artista
 INNER JOIN artista_generoA ag ON a.ID_artista = ag.ID_artista
 INNER JOIN generoA g ON ag.ID_generoA = g.ID_generoA
 WHERE g.Nom_generoA = 'Pop';
+
+- Consulta 8: Listar todas las canciones registradas
+
+SELECT p.ID_producto, 
+       c.ID_cancion, 
+       p.Nom_pedido AS Nombre_Cancion, 
+       c.Duracion_cancion, 
+       p.Precio_producto, 
+       p.Lanza_producto
+FROM Producto p
+INNER JOIN cancion c ON p.ID_producto = c.ID_producto;
+
