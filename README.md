@@ -17,7 +17,7 @@ ORDER BY Precio_producto ASC;
 SELECT ID_pedido, ID_pago, ID_cliente, Fecha_pedido, PrecioT_pedido 
 FROM pedido;
 
-- Consulta 3: listar los pedidos de conexion de "online"
+- Consulta 3: listar los pedidos de juegos conexion "online"
 
 SELECT p.ID_producto, p.Nom_pedido AS Juego, c.Tipo_conexion
 FROM Producto p
@@ -26,7 +26,7 @@ INNER JOIN juego_conexion jc ON j.ID_juego = jc.ID_juego
 INNER JOIN conexion c ON jc.ID_conexion = c.ID_conexion
 WHERE c.Tipo_conexion = 'Online';
 
-- consulta 4: listar los pedidos del desarrollador John loke
+- consulta 4: listar los pedidos de juegos del desarrollador John loke
 
 SELECT p.ID_producto, p.Nom_pedido AS Juego, d.Nom_desarrollador, d.Apelli_desarrollador
 FROM Producto p
@@ -37,6 +37,7 @@ WHERE d.Nom_desarrollador = 'John' AND d.Apelli_desarrollador = 'Locke';
 
 
 - Consulta 5: Listar las canciones de la artista Billie Eilish
+
 SELECT p.ID_producto, 
        p.Nom_pedido AS Nombre_Cancion, 
        c.Duracion_cancion, 
@@ -49,3 +50,9 @@ INNER JOIN cancion c ON p.ID_producto = c.ID_producto
 INNER JOIN artista_cancion ac ON c.ID_cancion = ac.ID_cancion
 INNER JOIN artista a ON ac.ID_artista = a.ID_artista
 WHERE a.Nom_artista = 'Billie' AND a.Apelli_artista = 'Eilish';
+
+- Consulta 6: Listar todos los productos con precio menor a 35000
+
+SELECT ID_producto, Tipo_producto, Nom_pedido, Precio_producto, Lanza_producto
+FROM Producto
+WHERE Precio_producto < 35000.00;
