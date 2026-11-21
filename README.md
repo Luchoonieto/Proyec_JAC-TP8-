@@ -99,4 +99,18 @@ INNER JOIN pago pa ON pe.ID_pago = pa.ID_pago
 INNER JOIN cliente c ON pe.ID_cliente = c.ID_cliente
 WHERE pa.Tipo_pago = 'Efectivo';
 
+- Consulta 10: Listar todos los pedidos realizados el 2026-11-21
+
+SELECT pe.ID_pedido, 
+       pe.Fecha_pedido, 
+       pe.PrecioT_pedido, 
+       pa.Tipo_pago, 
+       c.Nom_cliente, 
+       c.Apelli_cliente
+FROM pedido pe
+INNER JOIN pago pa ON pe.ID_pago = pa.ID_pago
+INNER JOIN cliente c ON pe.ID_cliente = c.ID_cliente
+WHERE DATE(pe.Fecha_pedido) = '2026-11-21';
+
+
 
