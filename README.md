@@ -34,4 +34,18 @@ INNER JOIN juego j ON p.ID_producto = j.ID_producto
 INNER JOIN juego_desarrollador jd ON j.ID_juego = jd.ID_juego
 INNER JOIN desarrollador d ON jd.ID_desarrollador = d.ID_desarrollador
 WHERE d.Nom_desarrollador = 'John' AND d.Apelli_desarrollador = 'Locke';
- 
+
+
+- Consulta 5: Listar las canciones de la artista Billie Eilish
+SELECT p.ID_producto, 
+       p.Nom_pedido AS Nombre_Cancion, 
+       c.Duracion_cancion, 
+       p.Precio_producto, 
+       p.Lanza_producto,
+       a.Nom_artista, 
+       a.Apelli_artista
+FROM Producto p
+INNER JOIN cancion c ON p.ID_producto = c.ID_producto
+INNER JOIN artista_cancion ac ON c.ID_cancion = ac.ID_cancion
+INNER JOIN artista a ON ac.ID_artista = a.ID_artista
+WHERE a.Nom_artista = 'Billie' AND a.Apelli_artista = 'Eilish';
